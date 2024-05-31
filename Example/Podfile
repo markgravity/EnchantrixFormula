@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EnchantrixFormula_Example' do
+  pod 'EnchantrixFormula', :path => '../'
+
+  target 'EnchantrixFormula_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,16 @@
+PODS:
+  - EnchantrixFormula (0.1.0)
+
+DEPENDENCIES:
+  - EnchantrixFormula (from `../`)
+
+EXTERNAL SOURCES:
+  EnchantrixFormula:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EnchantrixFormula: 08f8e82d0dd323bc710c2169e0af2a106f61a0aa
+
+PODFILE CHECKSUM: da03360f638c514ff1f45a6cb1ecc8dca254b603
+
+COCOAPODS: 1.15.2

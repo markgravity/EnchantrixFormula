@@ -1,0 +1,22 @@
+{
+  "name": "EnchantrixFormula",
+  "version": "0.1.0",
+  "summary": "A short description of EnchantrixFormula.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/markgravity/EnchantrixFormula",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "markgravity": "markgravity.in@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/markgravity/EnchantrixFormula.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "osx": "10.15"
+  },
+  "source_files": "Sources/**/*"
+}

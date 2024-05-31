@@ -1,0 +1,6 @@
+framework module EnchantrixFormula {
+  umbrella header "EnchantrixFormula-umbrella.h"
+
+  export *
+  module * { export * }
+}
