@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "osx": "10.15"
+    "osx": "10.10"
   },
-  "source_files": "Sources/**/*"
+  "source_files": "EnchantrixFormula/Classes/**/*"
 }

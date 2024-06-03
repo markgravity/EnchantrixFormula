@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19553AA78DD46BD446CA665468A35D1C /* AXUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370CFA45BBE0796FFAA9E0CBDBC6A4E /* AXUIElement.swift */; };
+		060E31A0579A8A9AEEDFC95F69939516 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C89C2AFD02FC682C7263BBE6737F8F /* ReplaceMe.swift */; };
 		4E28D017C9877B275555BB6419F8DA95 /* Pods-EnchantrixFormula_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D26A9FED576A9B6E1C6788D846341D9 /* Pods-EnchantrixFormula_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		653EE643223079365D191E801B091E37 /* EnchantrixFormula-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D7D9E6713BA53DAE7E4787C00AAA256 /* EnchantrixFormula-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		729769313755971ACEB6ABBAEF1D5666 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
-		79D7126891F6F76E1ABC37BF9D937979 /* EnchantrixFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D04779CE3A020C42EA2C6B435D9806 /* EnchantrixFormula.swift */; };
+		94DE04D0786167149116F9E08CB66939 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		9652A277FA6205B757E9FAF0A38F7656 /* EnchantrixFormula-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B14975B7EF37B54DB8317E260B843183 /* EnchantrixFormula-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D809F5F5140DB38706325DBD6428946 /* Pods-EnchantrixFormula_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB966FD853AE1CCEBF2EFC29C3B3224 /* Pods-EnchantrixFormula_Example-dummy.m */; };
 		9F87264008E97587537843CAD9B2894B /* Pods-EnchantrixFormula_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F80C305F7C96CEEA9C68A4F2A863507 /* Pods-EnchantrixFormula_Tests-dummy.m */; };
-		A69018694D835A726DFB14AAC02E04B3 /* Keylogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D2A3AB8AF8C2399B8C9773D864B5DB /* Keylogger.swift */; };
 		BD3840774D63829FA93485DF18CD56A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
 		C8FCED01ECD54C7183709E51A966BC45 /* Pods-EnchantrixFormula_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA5D7C932BE23B2C2746A1FA9A16C37 /* Pods-EnchantrixFormula_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFEBCD36C7937037BF5301AFF3548F73 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
-		E7B65C8170AC9FB78CC6F4D404617542 /* EnchantrixFormula-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF457F2CD8E5BCBC3CB31A3F2B113F1D /* EnchantrixFormula-dummy.m */; };
-		F8E1C48BC51C9401CD6BF90C9BDF318A /* Xcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478CBD4ECE5117064EE890E7042C75E /* Xcode.swift */; };
-		FC6D8F662CDB4A38913A9E2DCDA70798 /* HIDKeyboardUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0E705CB952863C78DEF0255779C49 /* HIDKeyboardUsage.swift */; };
+		D06720E2078B84C5325A100B3144CA03 /* EnchantrixFormula-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D9248E675520691EAB97D9BE1B7CE7 /* EnchantrixFormula-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		41D10B63DE8DB25739F6E703E49CD7AF /* PBXContainerItemProxy */ = {
+		420C599FBC8B769CDAD009C2EDFB0EF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 430BF57E2E8422B8CABAFC1558CB0B47;
 			remoteInfo = EnchantrixFormula;
 		};
-		8CC6FF278F165B34A8208D0D23806D88 /* PBXContainerItemProxy */ = {
+		66D70E6607686F8C150F2CE977F02635 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -41,59 +37,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000EBCF005E24B177ECEFD85AFF6AC31 /* EnchantrixFormula-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EnchantrixFormula-Info.plist"; sourceTree = "<group>"; };
 		0A3FF869022F4DDF93A0935104A2AB78 /* Pods-EnchantrixFormula_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnchantrixFormula_Tests-Info.plist"; sourceTree = "<group>"; };
-		12D2A3AB8AF8C2399B8C9773D864B5DB /* Keylogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Keylogger.swift; sourceTree = "<group>"; };
-		13D04779CE3A020C42EA2C6B435D9806 /* EnchantrixFormula.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnchantrixFormula.swift; path = Sources/EnchantrixFormula/EnchantrixFormula.swift; sourceTree = "<group>"; };
+		11C56E9720FCBFAA7D529AE107EC965F /* EnchantrixFormula.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EnchantrixFormula.modulemap; sourceTree = "<group>"; };
+		1C9E69CE45D1C729B10F56E662B07351 /* EnchantrixFormula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnchantrixFormula.debug.xcconfig; sourceTree = "<group>"; };
 		22D2F16AFB334588F3E08D83F74EAAA1 /* Pods-EnchantrixFormula_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnchantrixFormula_Example-Info.plist"; sourceTree = "<group>"; };
+		2A808755563924CBB2B0FDB0CF42EB82 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3DF7CE10C7934C5DD62C1530EDE1F18B /* Pods-EnchantrixFormula_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnchantrixFormula_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4370CFA45BBE0796FFAA9E0CBDBC6A4E /* AXUIElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AXUIElement.swift; sourceTree = "<group>"; };
 		43E80E3A9A0232D4781CB77A48919884 /* EnchantrixFormula */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EnchantrixFormula; path = EnchantrixFormula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFEDF1E83D29D483D9EA83101D34149 /* Pods-EnchantrixFormula_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EnchantrixFormula_Example.modulemap"; sourceTree = "<group>"; };
+		54D9248E675520691EAB97D9BE1B7CE7 /* EnchantrixFormula-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EnchantrixFormula-dummy.m"; sourceTree = "<group>"; };
 		57A7B2C8244E472FB91F6FDC0155D679 /* Pods-EnchantrixFormula_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnchantrixFormula_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D26A9FED576A9B6E1C6788D846341D9 /* Pods-EnchantrixFormula_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnchantrixFormula_Tests-umbrella.h"; sourceTree = "<group>"; };
-		6D7D9E6713BA53DAE7E4787C00AAA256 /* EnchantrixFormula-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnchantrixFormula-umbrella.h"; sourceTree = "<group>"; };
 		6F80C305F7C96CEEA9C68A4F2A863507 /* Pods-EnchantrixFormula_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnchantrixFormula_Tests-dummy.m"; sourceTree = "<group>"; };
 		6FA5D7C932BE23B2C2746A1FA9A16C37 /* Pods-EnchantrixFormula_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnchantrixFormula_Example-umbrella.h"; sourceTree = "<group>"; };
-		770934805222A9B950EA313D4E81380A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		7BD0E705CB952863C78DEF0255779C49 /* HIDKeyboardUsage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HIDKeyboardUsage.swift; sourceTree = "<group>"; };
+		79C89C2AFD02FC682C7263BBE6737F8F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = EnchantrixFormula/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		7EB74C9FC389995369AEC1E10B7F3379 /* EnchantrixFormula-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnchantrixFormula-prefix.pch"; sourceTree = "<group>"; };
 		8172C6D85B50B4BB92B8FEEB1D972843 /* Pods-EnchantrixFormula_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnchantrixFormula_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		83A5ECBDACE1D87FB7EDF642E92CA1B6 /* Pods-EnchantrixFormula_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-EnchantrixFormula_Example"; path = Pods_EnchantrixFormula_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A92BE0C09F3D7BC9F0B5BC39076D151 /* EnchantrixFormula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnchantrixFormula.release.xcconfig; sourceTree = "<group>"; };
 		8C2DC5B1763F7C12DE7A31217503731D /* Pods-EnchantrixFormula_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnchantrixFormula_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8E92DE4F6905FE609E4BA3B36104A665 /* EnchantrixFormula.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EnchantrixFormula.modulemap; sourceTree = "<group>"; };
-		92D3DA46CA135CA942384629ED8D58C0 /* EnchantrixFormula-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EnchantrixFormula-Info.plist"; sourceTree = "<group>"; };
+		8C584E574F15B1DF5598D50D306D889C /* EnchantrixFormula.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EnchantrixFormula.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		945928C70A4B595EEB144C248E08FEAE /* Pods-EnchantrixFormula_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnchantrixFormula_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A410ACEA28A72726B74C6B1FACC8BDD8 /* Pods-EnchantrixFormula_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-EnchantrixFormula_Tests"; path = Pods_EnchantrixFormula_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1C57D02FECD88BBC6052D7762AF209D /* EnchantrixFormula-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnchantrixFormula-prefix.pch"; sourceTree = "<group>"; };
-		B478CBD4ECE5117064EE890E7042C75E /* Xcode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Xcode.swift; sourceTree = "<group>"; };
+		B14975B7EF37B54DB8317E260B843183 /* EnchantrixFormula-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnchantrixFormula-umbrella.h"; sourceTree = "<group>"; };
 		B63798B4B85B366E28390223F5BBA0B4 /* Pods-EnchantrixFormula_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnchantrixFormula_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B6B02F4190578E743B685F8584072350 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		C6B3352F09E47151E3283A7B9B6C0B9D /* EnchantrixFormula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnchantrixFormula.debug.xcconfig; sourceTree = "<group>"; };
+		CB2837DA9E766B36A773696A9F8849B1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		D30EC475C826E6E3121463512D76F7D5 /* Pods-EnchantrixFormula_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnchantrixFormula_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D8C25A45BBFB9E67C46C9C440BA0B1E6 /* EnchantrixFormula.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EnchantrixFormula.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DCBF9A2AB3FC4176D6B82428E3AA4E5D /* EnchantrixFormula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnchantrixFormula.release.xcconfig; sourceTree = "<group>"; };
 		DF94DB5CB95669D7AE653593BF3E695E /* Pods-EnchantrixFormula_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EnchantrixFormula_Tests.modulemap"; sourceTree = "<group>"; };
 		E5F6CF93FBC487BAD19A785427B8F036 /* Pods-EnchantrixFormula_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnchantrixFormula_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EB23843E3AB7DAAE9010E487FB629930 /* Pods-EnchantrixFormula_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnchantrixFormula_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EF457F2CD8E5BCBC3CB31A3F2B113F1D /* EnchantrixFormula-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EnchantrixFormula-dummy.m"; sourceTree = "<group>"; };
 		FEB966FD853AE1CCEBF2EFC29C3B3224 /* Pods-EnchantrixFormula_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnchantrixFormula_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5085C92A3656AD84AB60FB24260CE376 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFEBCD36C7937037BF5301AFF3548F73 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		631BB25AFA23E8774BB108E6494B2538 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BD3840774D63829FA93485DF18CD56A4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72900F7055040B8A0C8C863846F40B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DE04D0786167149116F9E08CB66939 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,37 +109,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		174D11A10C882CCE835781902E917484 /* Extentions */ = {
+		05A676543629687CB06CF48B6AC2258E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4370CFA45BBE0796FFAA9E0CBDBC6A4E /* AXUIElement.swift */,
+				5D8C812E68C8A7092981B9E810CED687 /* EnchantrixFormula */,
 			);
-			name = Extentions;
-			path = Sources/EnchantrixFormula/Extentions;
-			sourceTree = "<group>";
-		};
-		216D21715F5CAB21E771F599B572D9A4 /* EnchantrixFormula */ = {
-			isa = PBXGroup;
-			children = (
-				13D04779CE3A020C42EA2C6B435D9806 /* EnchantrixFormula.swift */,
-				174D11A10C882CCE835781902E917484 /* Extentions */,
-				3549BE739406A4CBEB53096DFA417184 /* Helpers */,
-				E8F88EE0470DAA158ADDBA667846BBD2 /* Pod */,
-				7B400646226F295C9DAF2468B8BFB1DE /* Support Files */,
-			);
-			name = EnchantrixFormula;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		3549BE739406A4CBEB53096DFA417184 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7BD0E705CB952863C78DEF0255779C49 /* HIDKeyboardUsage.swift */,
-				12D2A3AB8AF8C2399B8C9773D864B5DB /* Keylogger.swift */,
-				B478CBD4ECE5117064EE890E7042C75E /* Xcode.swift */,
-			);
-			name = Helpers;
-			path = Sources/EnchantrixFormula/Helpers;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		51CA818383A7BA3F864384020478664D /* Pods-EnchantrixFormula_Example */ = {
@@ -177,19 +144,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B400646226F295C9DAF2468B8BFB1DE /* Support Files */ = {
+		5D8C812E68C8A7092981B9E810CED687 /* EnchantrixFormula */ = {
 			isa = PBXGroup;
 			children = (
-				8E92DE4F6905FE609E4BA3B36104A665 /* EnchantrixFormula.modulemap */,
-				EF457F2CD8E5BCBC3CB31A3F2B113F1D /* EnchantrixFormula-dummy.m */,
-				92D3DA46CA135CA942384629ED8D58C0 /* EnchantrixFormula-Info.plist */,
-				B1C57D02FECD88BBC6052D7762AF209D /* EnchantrixFormula-prefix.pch */,
-				6D7D9E6713BA53DAE7E4787C00AAA256 /* EnchantrixFormula-umbrella.h */,
-				C6B3352F09E47151E3283A7B9B6C0B9D /* EnchantrixFormula.debug.xcconfig */,
-				8A92BE0C09F3D7BC9F0B5BC39076D151 /* EnchantrixFormula.release.xcconfig */,
+				79C89C2AFD02FC682C7263BBE6737F8F /* ReplaceMe.swift */,
+				B694F68E9962B1EA9C8D9DE7A8C0678F /* Pod */,
+				ACB57A9B8451E5C4403B8CFB8B552E26 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EnchantrixFormula";
+			name = EnchantrixFormula;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		8AB07E37E240FF7490222E72227048B9 /* Pods-EnchantrixFormula_Tests */ = {
@@ -208,19 +171,36 @@
 			path = "Target Support Files/Pods-EnchantrixFormula_Tests";
 			sourceTree = "<group>";
 		};
-		AB6B9D6F5F1ED4ED94C21487CCE2E988 /* Development Pods */ = {
+		ACB57A9B8451E5C4403B8CFB8B552E26 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				216D21715F5CAB21E771F599B572D9A4 /* EnchantrixFormula */,
+				11C56E9720FCBFAA7D529AE107EC965F /* EnchantrixFormula.modulemap */,
+				54D9248E675520691EAB97D9BE1B7CE7 /* EnchantrixFormula-dummy.m */,
+				000EBCF005E24B177ECEFD85AFF6AC31 /* EnchantrixFormula-Info.plist */,
+				7EB74C9FC389995369AEC1E10B7F3379 /* EnchantrixFormula-prefix.pch */,
+				B14975B7EF37B54DB8317E260B843183 /* EnchantrixFormula-umbrella.h */,
+				1C9E69CE45D1C729B10F56E662B07351 /* EnchantrixFormula.debug.xcconfig */,
+				DCBF9A2AB3FC4176D6B82428E3AA4E5D /* EnchantrixFormula.release.xcconfig */,
 			);
-			name = "Development Pods";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EnchantrixFormula";
+			sourceTree = "<group>";
+		};
+		B694F68E9962B1EA9C8D9DE7A8C0678F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8C584E574F15B1DF5598D50D306D889C /* EnchantrixFormula.podspec */,
+				CB2837DA9E766B36A773696A9F8849B1 /* LICENSE */,
+				2A808755563924CBB2B0FDB0CF42EB82 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				AB6B9D6F5F1ED4ED94C21487CCE2E988 /* Development Pods */,
+				05A676543629687CB06CF48B6AC2258E /* Development Pods */,
 				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
 				59F98218F68C90E19786F403451BAF1A /* Products */,
 				0163C5FF9AB749A8A03369888369F467 /* Targets Support Files */,
@@ -243,27 +223,9 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		E8F88EE0470DAA158ADDBA667846BBD2 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D8C25A45BBFB9E67C46C9C440BA0B1E6 /* EnchantrixFormula.podspec */,
-				B6B02F4190578E743B685F8584072350 /* LICENSE */,
-				770934805222A9B950EA313D4E81380A /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6942B6CDE158AAC48EA1F53320C99C4D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				653EE643223079365D191E801B091E37 /* EnchantrixFormula-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		81E98F664ECDB5217B43874C59BCF3AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,17 +242,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1835E2E8F4F97A1ED4385A566F66B82 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9652A277FA6205B757E9FAF0A38F7656 /* EnchantrixFormula-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		430BF57E2E8422B8CABAFC1558CB0B47 /* EnchantrixFormula */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7171A4714932E20A501AB7E8B6052F2E /* Build configuration list for PBXNativeTarget "EnchantrixFormula" */;
+			buildConfigurationList = DB36DC3BFC5013C5465796C85787331A /* Build configuration list for PBXNativeTarget "EnchantrixFormula" */;
 			buildPhases = (
-				6942B6CDE158AAC48EA1F53320C99C4D /* Headers */,
-				6F58B08F99CE20B9EFBE866703FC64F8 /* Sources */,
-				5085C92A3656AD84AB60FB24260CE376 /* Frameworks */,
-				8164DFDA3647EFCE76BCA7B61949C12B /* Resources */,
+				C1835E2E8F4F97A1ED4385A566F66B82 /* Headers */,
+				15126408FE91A408057BE69E530DC420 /* Sources */,
+				72900F7055040B8A0C8C863846F40B45 /* Frameworks */,
+				829C556635A27D60A79AC85ED361D714 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -313,7 +283,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				91C9948055ADFFDF4E036BED3DA57F76 /* PBXTargetDependency */,
+				8215CCD7A5DB55271C6990E9A86FA654 /* PBXTargetDependency */,
 			);
 			name = "Pods-EnchantrixFormula_Tests";
 			productName = Pods_EnchantrixFormula_Tests;
@@ -332,7 +302,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9010B90A401C90A1F95138B2BEE11E62 /* PBXTargetDependency */,
+				CDB1ABC56B22C61DA9C81F4D31089800 /* PBXTargetDependency */,
 			);
 			name = "Pods-EnchantrixFormula_Example";
 			productName = Pods_EnchantrixFormula_Example;
@@ -376,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8164DFDA3647EFCE76BCA7B61949C12B /* Resources */ = {
+		829C556635A27D60A79AC85ED361D714 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,16 +363,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6F58B08F99CE20B9EFBE866703FC64F8 /* Sources */ = {
+		15126408FE91A408057BE69E530DC420 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19553AA78DD46BD446CA665468A35D1C /* AXUIElement.swift in Sources */,
-				79D7126891F6F76E1ABC37BF9D937979 /* EnchantrixFormula.swift in Sources */,
-				E7B65C8170AC9FB78CC6F4D404617542 /* EnchantrixFormula-dummy.m in Sources */,
-				FC6D8F662CDB4A38913A9E2DCDA70798 /* HIDKeyboardUsage.swift in Sources */,
-				A69018694D835A726DFB14AAC02E04B3 /* Keylogger.swift in Sources */,
-				F8E1C48BC51C9401CD6BF90C9BDF318A /* Xcode.swift in Sources */,
+				D06720E2078B84C5325A100B3144CA03 /* EnchantrixFormula-dummy.m in Sources */,
+				060E31A0579A8A9AEEDFC95F69939516 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,53 +391,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9010B90A401C90A1F95138B2BEE11E62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EnchantrixFormula;
-			target = 430BF57E2E8422B8CABAFC1558CB0B47 /* EnchantrixFormula */;
-			targetProxy = 41D10B63DE8DB25739F6E703E49CD7AF /* PBXContainerItemProxy */;
-		};
-		91C9948055ADFFDF4E036BED3DA57F76 /* PBXTargetDependency */ = {
+		8215CCD7A5DB55271C6990E9A86FA654 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-EnchantrixFormula_Example";
 			target = 82C96B9A2838444D3CC2841D31BAF93F /* Pods-EnchantrixFormula_Example */;
-			targetProxy = 8CC6FF278F165B34A8208D0D23806D88 /* PBXContainerItemProxy */;
+			targetProxy = 66D70E6607686F8C150F2CE977F02635 /* PBXContainerItemProxy */;
+		};
+		CDB1ABC56B22C61DA9C81F4D31089800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EnchantrixFormula;
+			target = 430BF57E2E8422B8CABAFC1558CB0B47 /* EnchantrixFormula */;
+			targetProxy = 420C599FBC8B769CDAD009C2EDFB0EF9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		37D663A345E7CB196F173D9056852576 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6B3352F09E47151E3283A7B9B6C0B9D /* EnchantrixFormula.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EnchantrixFormula/EnchantrixFormula-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula.modulemap";
-				PRODUCT_MODULE_NAME = EnchantrixFormula;
-				PRODUCT_NAME = EnchantrixFormula;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		590B02070A03831489D571BB6A149E1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB23843E3AB7DAAE9010E487FB629930 /* Pods-EnchantrixFormula_Example.debug.xcconfig */;
@@ -501,6 +435,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62451FFE1626911443337A91DDB7A6CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9E69CE45D1C729B10F56E662B07351 /* EnchantrixFormula.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EnchantrixFormula/EnchantrixFormula-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula.modulemap";
+				PRODUCT_MODULE_NAME = EnchantrixFormula;
+				PRODUCT_NAME = EnchantrixFormula;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -606,38 +572,6 @@
 			};
 			name = Debug;
 		};
-		7BC5814B95018EDD3D8F4031F919343F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A92BE0C09F3D7BC9F0B5BC39076D151 /* EnchantrixFormula.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EnchantrixFormula/EnchantrixFormula-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula.modulemap";
-				PRODUCT_MODULE_NAME = EnchantrixFormula;
-				PRODUCT_NAME = EnchantrixFormula;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		81158BE4A693C8A648801447CD4853D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57A7B2C8244E472FB91F6FDC0155D679 /* Pods-EnchantrixFormula_Tests.debug.xcconfig */;
@@ -701,6 +635,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		985D5810BEFFDBCBA1C1002746A3F381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCBF9A2AB3FC4176D6B82428E3AA4E5D /* EnchantrixFormula.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EnchantrixFormula/EnchantrixFormula-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/EnchantrixFormula/EnchantrixFormula.modulemap";
+				PRODUCT_MODULE_NAME = EnchantrixFormula;
+				PRODUCT_NAME = EnchantrixFormula;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -789,20 +755,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7171A4714932E20A501AB7E8B6052F2E /* Build configuration list for PBXNativeTarget "EnchantrixFormula" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				37D663A345E7CB196F173D9056852576 /* Debug */,
-				7BC5814B95018EDD3D8F4031F919343F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9846EC0FC83ACC1E742FBC68707240FF /* Build configuration list for PBXNativeTarget "Pods-EnchantrixFormula_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				590B02070A03831489D571BB6A149E1A /* Debug */,
 				8326E505973E7B99196809C4A9E322EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB36DC3BFC5013C5465796C85787331A /* Build configuration list for PBXNativeTarget "EnchantrixFormula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62451FFE1626911443337A91DDB7A6CB /* Debug */,
+				985D5810BEFFDBCBA1C1002746A3F381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

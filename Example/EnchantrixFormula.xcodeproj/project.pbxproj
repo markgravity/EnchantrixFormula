@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		736E7DCBAA007B0C25268D2D /* Pods_EnchantrixFormula_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232B255D4CB5FC6512703531 /* Pods_EnchantrixFormula_Tests.framework */; };
+		35347127C743C5A121620D9E /* Pods_EnchantrixFormula_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8E35E4FA8982FBCD769BB6 /* Pods_EnchantrixFormula_Tests.framework */; };
+		AEC4F2B57D830E50749A58A5 /* Pods_EnchantrixFormula_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93296F403358246A3993EF21 /* Pods_EnchantrixFormula_Example.framework */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F67E20348A760038D96B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* ViewController.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
 		ED83F68320348A760038D96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED83F68120348A760038D96B /* Main.storyboard */; };
 		ED83F68F20348A760038D96B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* Tests.swift */; };
-		F16429B57345B040FD75713D /* Pods_EnchantrixFormula_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4106625A65C9DC702D9AF3 /* Pods_EnchantrixFormula_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,14 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BEE51BB638FAF7B711BE170 /* Pods-EnchantrixFormula_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Example.release.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example.release.xcconfig"; sourceTree = "<group>"; };
-		13369CF694A31CC21FC438AB /* Pods-EnchantrixFormula_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Example.debug.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		232B255D4CB5FC6512703531 /* Pods_EnchantrixFormula_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnchantrixFormula_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		273415978B71FFDC5D5FDFC5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9C04B8DE5165C187D02AB1A0 /* Pods-EnchantrixFormula_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Tests.release.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Tests/Pods-EnchantrixFormula_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		ACAB3DFE7E4AAA3BE671C919 /* Pods-EnchantrixFormula_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Tests/Pods-EnchantrixFormula_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BD4106625A65C9DC702D9AF3 /* Pods_EnchantrixFormula_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnchantrixFormula_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFEAAD6A8E1F3E92AD53720F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		38CACCD4002AA3A093CA761C /* Pods-EnchantrixFormula_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Example.debug.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3D2FE9E51EDF53A8C6893A8B /* EnchantrixFormula.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EnchantrixFormula.podspec; path = ../EnchantrixFormula.podspec; sourceTree = "<group>"; };
+		7D8E35E4FA8982FBCD769BB6 /* Pods_EnchantrixFormula_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnchantrixFormula_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB5BC08CEBAA432F449ADBF /* Pods-EnchantrixFormula_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Example.release.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example.release.xcconfig"; sourceTree = "<group>"; };
+		91C88E5B3C97F5938F0FABE0 /* Pods-EnchantrixFormula_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Tests.release.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Tests/Pods-EnchantrixFormula_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		93296F403358246A3993EF21 /* Pods_EnchantrixFormula_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnchantrixFormula_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECB3408FA4BF40AB6A1256E /* Pods-EnchantrixFormula_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnchantrixFormula_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EnchantrixFormula_Tests/Pods-EnchantrixFormula_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA828C51E1B4783A8A3F4094 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D59C2A212267C4158E078157 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED83F67820348A760038D96B /* EnchantrixFormula_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnchantrixFormula_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F67B20348A760038D96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED83F67D20348A760038D96B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		ED83F68A20348A760038D96B /* EnchantrixFormula_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnchantrixFormula_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F68E20348A760038D96B /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		ED83F69020348A760038D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F90F76F25D4D7EE1AEED18F6 /* EnchantrixFormula.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EnchantrixFormula.podspec; path = ../EnchantrixFormula.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F16429B57345B040FD75713D /* Pods_EnchantrixFormula_Example.framework in Frameworks */,
+				AEC4F2B57D830E50749A58A5 /* Pods_EnchantrixFormula_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,32 +61,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				736E7DCBAA007B0C25268D2D /* Pods_EnchantrixFormula_Tests.framework in Frameworks */,
+				35347127C743C5A121620D9E /* Pods_EnchantrixFormula_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5124EAE458BF09513EB8F3B6 /* Pods */ = {
+		095BA9D95D4A3486140A43BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13369CF694A31CC21FC438AB /* Pods-EnchantrixFormula_Example.debug.xcconfig */,
-				0BEE51BB638FAF7B711BE170 /* Pods-EnchantrixFormula_Example.release.xcconfig */,
-				ACAB3DFE7E4AAA3BE671C919 /* Pods-EnchantrixFormula_Tests.debug.xcconfig */,
-				9C04B8DE5165C187D02AB1A0 /* Pods-EnchantrixFormula_Tests.release.xcconfig */,
+				93296F403358246A3993EF21 /* Pods_EnchantrixFormula_Example.framework */,
+				7D8E35E4FA8982FBCD769BB6 /* Pods_EnchantrixFormula_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		707BBF48C877AB928A1B9A00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38CACCD4002AA3A093CA761C /* Pods-EnchantrixFormula_Example.debug.xcconfig */,
+				8FB5BC08CEBAA432F449ADBF /* Pods-EnchantrixFormula_Example.release.xcconfig */,
+				BECB3408FA4BF40AB6A1256E /* Pods-EnchantrixFormula_Tests.debug.xcconfig */,
+				91C88E5B3C97F5938F0FABE0 /* Pods-EnchantrixFormula_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		5BECBCD309EE5840C7D8D7DE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BD4106625A65C9DC702D9AF3 /* Pods_EnchantrixFormula_Example.framework */,
-				232B255D4CB5FC6512703531 /* Pods_EnchantrixFormula_Tests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		ED83F66F20348A760038D96B = {
@@ -96,8 +96,8 @@
 				ED83F67A20348A760038D96B /* EnchantrixFormula */,
 				ED83F68D20348A760038D96B /* Tests */,
 				ED83F67920348A760038D96B /* Products */,
-				5124EAE458BF09513EB8F3B6 /* Pods */,
-				5BECBCD309EE5840C7D8D7DE /* Frameworks */,
+				707BBF48C877AB928A1B9A00 /* Pods */,
+				095BA9D95D4A3486140A43BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +135,9 @@
 		ED83F69A20348B650038D96B /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				F90F76F25D4D7EE1AEED18F6 /* EnchantrixFormula.podspec */,
-				DFEAAD6A8E1F3E92AD53720F /* README.md */,
-				273415978B71FFDC5D5FDFC5 /* LICENSE */,
+				3D2FE9E51EDF53A8C6893A8B /* EnchantrixFormula.podspec */,
+				CA828C51E1B4783A8A3F4094 /* README.md */,
+				D59C2A212267C4158E078157 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -149,11 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED83F69320348A760038D96B /* Build configuration list for PBXNativeTarget "EnchantrixFormula_Example" */;
 			buildPhases = (
-				4359794F2687243EA8C9A3D6 /* [CP] Check Pods Manifest.lock */,
+				49042F5AF4D4A313AD6C9D25 /* [CP] Check Pods Manifest.lock */,
 				ED83F67420348A760038D96B /* Sources */,
 				ED83F67520348A760038D96B /* Frameworks */,
 				ED83F67620348A760038D96B /* Resources */,
-				0B4B3751D113B66699DEA789 /* [CP] Embed Pods Frameworks */,
+				8FE0A8FBA68EF4044C463D39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,7 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED83F69620348A760038D96B /* Build configuration list for PBXNativeTarget "EnchantrixFormula_Tests" */;
 			buildPhases = (
-				947129D7C38372536E153393 /* [CP] Check Pods Manifest.lock */,
+				282CA32E683C811F8EA3A03A /* [CP] Check Pods Manifest.lock */,
 				ED83F68620348A760038D96B /* Sources */,
 				ED83F68720348A760038D96B /* Frameworks */,
 				ED83F68820348A760038D96B /* Resources */,
@@ -243,25 +243,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B4B3751D113B66699DEA789 /* [CP] Embed Pods Frameworks */ = {
+		282CA32E683C811F8EA3A03A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EnchantrixFormula/EnchantrixFormula.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnchantrixFormula.framework",
+				"$(DERIVED_FILE_DIR)/Pods-EnchantrixFormula_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4359794F2687243EA8C9A3D6 /* [CP] Check Pods Manifest.lock */ = {
+		49042F5AF4D4A313AD6C9D25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,26 +287,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		947129D7C38372536E153393 /* [CP] Check Pods Manifest.lock */ = {
+		8FE0A8FBA68EF4044C463D39 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EnchantrixFormula/EnchantrixFormula.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EnchantrixFormula_Tests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnchantrixFormula.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnchantrixFormula_Example/Pods-EnchantrixFormula_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -455,7 +455,7 @@
 		};
 		ED83F69420348A760038D96B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13369CF694A31CC21FC438AB /* Pods-EnchantrixFormula_Example.debug.xcconfig */;
+			baseConfigurationReference = 38CACCD4002AA3A093CA761C /* Pods-EnchantrixFormula_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnchantrixFormula/EnchantrixFormula.entitlements;
@@ -471,7 +471,7 @@
 		};
 		ED83F69520348A760038D96B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BEE51BB638FAF7B711BE170 /* Pods-EnchantrixFormula_Example.release.xcconfig */;
+			baseConfigurationReference = 8FB5BC08CEBAA432F449ADBF /* Pods-EnchantrixFormula_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnchantrixFormula/EnchantrixFormula.entitlements;
@@ -487,7 +487,7 @@
 		};
 		ED83F69720348A760038D96B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACAB3DFE7E4AAA3BE671C919 /* Pods-EnchantrixFormula_Tests.debug.xcconfig */;
+			baseConfigurationReference = BECB3408FA4BF40AB6A1256E /* Pods-EnchantrixFormula_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,7 +504,7 @@
 		};
 		ED83F69820348A760038D96B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C04B8DE5165C187D02AB1A0 /* Pods-EnchantrixFormula_Tests.release.xcconfig */;
+			baseConfigurationReference = 91C88E5B3C97F5938F0FABE0 /* Pods-EnchantrixFormula_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

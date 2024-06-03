@@ -7,7 +7,7 @@
 
 import IOKit.hid
 
-public enum HIDKeyboardUsage: UInt32 {
+@objc public enum HIDKeyboardUsage: UInt32 {
 
     case errorRollOver = 0x01
     case postFail = 0x02
