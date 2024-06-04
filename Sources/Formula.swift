@@ -18,20 +18,19 @@ import Foundation
 @objc public protocol Formula {
 
     @objc static var id: String { get }
+    @objc static var target: String { get }
     @objc static var dependencies: [FormulaDependency] { get }
 
-    @objc var title: String { get }
+    @objc var name: String { get }
     @objc var description: String { get }
-    @objc var icon: Data { get }
+    @objc var icon: NSImage? { get }
+    @objc var isPassive: Bool { get }
 
     @objc init(dependencies: [FormulaDependency: AnyObject])
+    
+    @objc func enchant()
+    @objc func disenchant()
     @objc func active()
-    @objc func deactive()
-}
-
-@objc public protocol ActionFormula: Formula {
-
-    @objc func excute()
 }
 
 public extension Formula {
