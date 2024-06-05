@@ -13,4 +13,5 @@ import Cocoa
     @objc var element: AXUIElement? { get }
     @objc var isFocused: Bool { get }
     @objc var sourceEditor: AXUIElement? { get }
+    @objc var workspaceURL: URL? { get }
 }
