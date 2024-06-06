@@ -19,10 +19,10 @@ import Combine
 
 @objc public protocol Formula {
 
-    @objc static var id: String { get }
     @objc static var targets: [String] { get }
     @objc static var dependencies: [FormulaDependency] { get }
 
+    @objc var id: String { get }
     @objc var name: String { get }
     @objc var description: String { get }
     @objc var icon: NSImage? { get }
@@ -35,7 +35,7 @@ import Combine
     @objc func active() async
 }
 
-public extension Formula {
-
-    var id: String { Self.id }
-}
+//public extension Formula {
+//
+//    var id: String { Self.id }
+//}

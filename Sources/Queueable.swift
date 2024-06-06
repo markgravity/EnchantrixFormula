@@ -13,15 +13,21 @@ public typealias TaskInit = (_ onOutput: @escaping (QueueableOutput) -> Void) ->
 public final class QueuedTask: ObservableObject, Identifiable, Equatable {
 
     public let id: UUID = .init()
-    public let formula: Formula
+    public let name: String
+    public let icon: NSImage?
 
     let taskInit: TaskInit
 
     @Published public var output: [QueueableOutput] = []
     @Published public var isRunning: Bool = false
 
-    public init(formula: Formula, taskInit: @escaping TaskInit) {
-        self.formula = formula
+    public init(
+        name: String,
+        icon: NSImage?,
+        taskInit: @escaping TaskInit
+    ) {
+        self.name = name
+        self.icon = icon
         self.taskInit = taskInit
     }
 
