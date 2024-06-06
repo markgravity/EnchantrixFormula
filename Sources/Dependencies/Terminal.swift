@@ -13,7 +13,7 @@ import Foundation
         _ cmd : String,
         at dir: URL?,
         onOuput: ((TerminalOutput) -> Void)?
-    ) async
+    ) async throws
 }
 
 public extension Terminal {
@@ -22,8 +22,8 @@ public extension Terminal {
         _ cmd : String,
         at dir: URL? = nil,
         onOuput: ((TerminalOutput) -> Void)? = nil
-    ) async {
-        await run(
+    ) async throws {
+        try await run(
             cmd,
             at: dir,
             onOuput: onOuput

@@ -35,7 +35,7 @@ import Combine
     @objc func active() async
 }
 
-//public extension Formula {
-//
-//    var id: String { Self.id }
-//}
+public extension Formula {
+
+    var targets: [String] { Self.targets }
+}
