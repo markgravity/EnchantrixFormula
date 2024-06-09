@@ -124,6 +124,18 @@ public extension AXUIElement {
         let error = AXUIElementSetAttributeValue(self, kAXPositionAttribute as CFString, positionValue)
         print(error)
     }
+
+    func appActive() {
+        AXUIElementSetAttributeValue(self, kAXFrontmostAttribute as CFString, true as CFTypeRef)
+    }
+
+    func makeMain() {
+        AXUIElementSetAttributeValue(self, kAXMainWindowAttribute as CFString, true as CFTypeRef)
+    }
+
+    func perform(_ action: String) {
+        AXUIElementPerformAction(self, action as CFString)
+    }
 }
 
 // MARK: - Rect

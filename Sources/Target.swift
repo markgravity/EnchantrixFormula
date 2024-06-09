@@ -7,10 +7,22 @@
 
 import Foundation
 import AppKit
+import ApplicationServices
+import ScriptingBridge
 
 public struct Target: Hashable, Identifiable {
 
     public let id: String
+
+    public var runningApp: NSRunningApplication? {
+        NSRunningApplication.runningApplications(withBundleIdentifier: id)
+            .first
+    }
+
+    public var element: AXUIElement? {
+        guard let runningApp else { return nil }
+        return AXUIElementCreateApplication(runningApp.processIdentifier)
+    }
 
     public var url: URL? {
         NSWorkspace.shared.urlForApplication(withBundleIdentifier: id)
@@ -43,5 +55,9 @@ public struct Target: Hashable, Identifiable {
 
     public init(id: String) {
         self.id = id
+    }
+
+    public func getAppScripting<T: SBApplication>() -> T? {
+        SBApplication(bundleIdentifier: id) as? T
     }
 }

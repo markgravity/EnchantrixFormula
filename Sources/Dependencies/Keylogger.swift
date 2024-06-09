@@ -18,9 +18,21 @@ import Foundation
 
     @objc public let key: HIDKeyboardUsage
     @objc public let isCommandKeyPressed: Bool
+    @objc public let isShiftKeyPressed: Bool
+    @objc public let isControlKeyPressed: Bool
+    @objc public let isOptionKeyPressed: Bool
 
-    @objc public init(key: HIDKeyboardUsage, isCommandKeyPressed: Bool) {
+    @objc public init(
+        key: HIDKeyboardUsage,
+        isCommandKeyPressed: Bool,
+        isShiftKeyPressed: Bool,
+        isControlKeyPressed: Bool,
+        isOptionKeyPressed: Bool
+    ) {
         self.key = key
         self.isCommandKeyPressed = isCommandKeyPressed
+        self.isShiftKeyPressed = isShiftKeyPressed
+        self.isControlKeyPressed = isControlKeyPressed
+        self.isOptionKeyPressed = isOptionKeyPressed
     }
 }

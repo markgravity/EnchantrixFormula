@@ -140,5 +140,11 @@ import IOKit.hid
     case volumeDown = 0x81
     case commandLeft = 0xE3
     case commandRight = 0xE7
+    case shiftLeft = 0xE1
+    case shiftRight = 0xE5
+    case controlLeft = 0xE0
+    case controlRight = 0xE4
+    case optionLeft = 0xE2
+    case optionRight = 0xE6
 }
 
