@@ -9,8 +9,8 @@ import Foundation
 
 @objc public protocol Keylogger {
 
-    @objc func registerListener(for formula: Formula, onEvent: @escaping (KeyloggerEvent) -> Void)
-    @objc func unregisterListener(for formula: Formula)
+    func registerListener(for formula: Formula & Enchantable, onEvent: @escaping (KeyloggerEvent) -> Void)
+    func unregisterListener(for formula: Formula)
 }
 
 

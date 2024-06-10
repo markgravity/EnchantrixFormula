@@ -11,3 +11,8 @@ public protocol Childrenable {
 
     var children: [Formula] { get }
 }
+
+public protocol ChildFormula: Formula {
+
+    associatedtype Parent: Formula
+}

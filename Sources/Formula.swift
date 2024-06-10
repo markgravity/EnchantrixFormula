@@ -19,23 +19,30 @@ import Combine
 
 @objc public protocol Formula {
 
-    @objc static var targets: [String] { get }
-    @objc static var dependencies: [FormulaDependency] { get }
-
     @objc var id: String { get }
     @objc var name: String { get }
     @objc var description: String { get }
     @objc var icon: NSImage? { get }
-    @objc var isPassive: Bool { get }
-
-    @objc init(dependencies: [FormulaDependency: AnyObject])
-    
-    @objc func enchant()
-    @objc func disenchant()
-    @objc func active() async
 }
 
-public extension Formula {
+@objc public protocol Enchantable {
+
+    static var id: String { get }
+    static var targets: [String] { get }
+    static var dependencies: [FormulaDependency] { get }
+
+    init(dependencies: [FormulaDependency: AnyObject])
+
+    func enchant()
+    func disenchant()
+}
+
+public protocol Activable {
+
+    func active()
+}
+
+public extension Enchantable {
 
     var targets: [String] { Self.targets }
 }
