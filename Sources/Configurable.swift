@@ -15,11 +15,7 @@ public protocol Configurable {
     var settingsView: AnyView { get }
 }
 
-public protocol FormulaSettings: ObservableObject {
-
-//    func save()
-//    func load()
-}
+public protocol FormulaSettings: ObservableObject {}
 
 @propertyWrapper
 public struct FormulaSettingItem<Value> {
@@ -104,7 +100,9 @@ public struct FormulaSettingItem<Value> {
     }
 
     static private func getUserDefaults<OuterSelf: ObservableObject>(for observed: OuterSelf) -> UserDefaults {
-        let name = getModuleName(for: observed)
+        guard let name = Bundle(for: OuterSelf.self).infoDictionary?["CFBundleIdentifier"] as? String
+        else { fatalError("Missing bundle identifier") }
+
         return .init(suiteName: name)!
     }
 }

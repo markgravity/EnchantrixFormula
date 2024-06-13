@@ -6,6 +6,7 @@
 //
 
 import IOKit.hid
+import Carbon
 
 @objc public enum HIDKeyboardUsage: UInt32 {
 
@@ -148,3 +149,141 @@ import IOKit.hid
     case optionRight = 0xE6
 }
 
+public extension HIDKeyboardUsage {
+
+    var keyCode: Int {
+        switch self {
+        case .a: return kVK_ANSI_A
+        case .b: return kVK_ANSI_B
+        case .c: return kVK_ANSI_C
+        case .d: return kVK_ANSI_D
+        case .e: return kVK_ANSI_E
+        case .f: return kVK_ANSI_F
+        case .g: return kVK_ANSI_G
+        case .h: return kVK_ANSI_H
+        case .i: return kVK_ANSI_I
+        case .j: return kVK_ANSI_J
+        case .k: return kVK_ANSI_K
+        case .l: return kVK_ANSI_L
+        case .m: return kVK_ANSI_M
+        case .n: return kVK_ANSI_N
+        case .o: return kVK_ANSI_O
+        case .p: return kVK_ANSI_P
+        case .q: return kVK_ANSI_Q
+        case .r: return kVK_ANSI_R
+        case .s: return kVK_ANSI_S
+        case .t: return kVK_ANSI_T
+        case .u: return kVK_ANSI_U
+        case .v: return kVK_ANSI_V
+        case .w: return kVK_ANSI_W
+        case .x: return kVK_ANSI_X
+        case .y: return kVK_ANSI_Y
+        case .z: return kVK_ANSI_Z
+        case .one: return kVK_ANSI_1
+        case .two: return kVK_ANSI_2
+        case .three: return kVK_ANSI_3
+        case .four: return kVK_ANSI_4
+        case .five: return kVK_ANSI_5
+        case .six: return kVK_ANSI_6
+        case .seven: return kVK_ANSI_7
+        case .eight: return kVK_ANSI_8
+        case .nine: return kVK_ANSI_9
+        case .zero: return kVK_ANSI_0
+        case .returnOrEnter: return kVK_Return
+        case .escape: return kVK_Escape
+        case .deleteOrBackspace: return kVK_Delete
+        case .tab: return kVK_Tab
+        case .spacebar: return kVK_Space
+        case .hyphenUnderscore: return kVK_ANSI_Minus
+        case .equalsPlus: return kVK_ANSI_Equal
+        case .openBracket: return kVK_ANSI_LeftBracket
+        case .closeBracket: return kVK_ANSI_RightBracket
+        case .backslashPipe: return kVK_ANSI_Backslash
+        case .nonUSPoundTilde: return kVK_ISO_Section
+        case .semicolonColon: return kVK_ANSI_Semicolon
+        case .singleQuoteDoubleQuote: return kVK_ANSI_Quote
+        case .graveAccentTilde: return kVK_ANSI_Grave
+        case .commaLessThan: return kVK_ANSI_Comma
+        case .periodGreaterThan: return kVK_ANSI_Period
+        case .slashQuestionMark: return kVK_ANSI_Slash
+        case .capsLock: return kVK_CapsLock
+        case .f1: return kVK_F1
+        case .f2: return kVK_F2
+        case .f3: return kVK_F3
+        case .f4: return kVK_F4
+        case .f5: return kVK_F5
+        case .f6: return kVK_F6
+        case .f7: return kVK_F7
+        case .f8: return kVK_F8
+        case .f9: return kVK_F9
+        case .f10: return kVK_F10
+        case .f11: return kVK_F11
+        case .f12: return kVK_F12
+        case .printScreen: return kVK_F13 // No direct mapping, using F13 as placeholder
+        case .scrollLock: return kVK_F14 // No direct mapping, using F14 as placeholder
+        case .pause: return kVK_F15 // No direct mapping, using F15 as placeholder
+        case .insert: return kVK_Help
+        case .home: return kVK_Home
+        case .pageUp: return kVK_PageUp
+        case .deleteForward: return kVK_ForwardDelete
+        case .end: return kVK_End
+        case .pageDown: return kVK_PageDown
+        case .rightArrow: return kVK_RightArrow
+        case .leftArrow: return kVK_LeftArrow
+        case .downArrow: return kVK_DownArrow
+        case .upArrow: return kVK_UpArrow
+        case .keypadNumLockClear: return kVK_ANSI_KeypadClear
+        case .keypadSlash: return kVK_ANSI_KeypadDivide
+        case .keypadAsterisk: return kVK_ANSI_KeypadMultiply
+        case .keypadHyphen: return kVK_ANSI_KeypadMinus
+        case .keypadPlus: return kVK_ANSI_KeypadPlus
+        case .keypadEnter: return kVK_ANSI_KeypadEnter
+        case .keypadOne: return kVK_ANSI_Keypad1
+        case .keypadTwo: return kVK_ANSI_Keypad2
+        case .keypadThree: return kVK_ANSI_Keypad3
+        case .keypadFour: return kVK_ANSI_Keypad4
+        case .keypadFive: return kVK_ANSI_Keypad5
+        case .keypadSix: return kVK_ANSI_Keypad6
+        case .keypadSeven: return kVK_ANSI_Keypad7
+        case .keypadEight: return kVK_ANSI_Keypad8
+        case .keypadNine: return kVK_ANSI_Keypad9
+        case .keypadZero: return kVK_ANSI_Keypad0
+        case .keypadPeriod: return kVK_ANSI_KeypadDecimal
+        case .nonUSBackslash: return kVK_ISO_Section // No direct mapping, using ISO Section as placeholder
+        case .application: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .keypadEquals: return kVK_ANSI_KeypadEquals
+        case .f13: return kVK_F13
+        case .f14: return kVK_F14
+        case .f15: return kVK_F15
+        case .f16: return kVK_F16
+        case .f17: return kVK_F17
+        case .f18: return kVK_F18
+        case .f19: return kVK_F19
+        case .f20: return kVK_F20
+        case .execute: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .help: return kVK_Help
+        case .menu: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .select: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .stop: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .again: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .undo: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .cut: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .copy: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .paste: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .find: return kVK_ANSI_KeypadEnter // No direct mapping, using Keypad Enter as placeholder
+        case .mute: return kVK_Mute
+        case .volumeUp: return kVK_VolumeUp
+        case .volumeDown: return kVK_VolumeDown
+        case .commandLeft: return kVK_Command
+        case .commandRight: return kVK_Command
+        case .shiftLeft: return kVK_Shift
+        case .shiftRight: return kVK_RightShift
+        case .controlLeft: return kVK_Control
+        case .controlRight: return kVK_RightControl
+        case .optionLeft: return kVK_Option
+        case .optionRight: return kVK_RightOption
+        case .errorRollOver, .postFail, .errorUndefined, .f21, .f22, .f23, .f24, .power:
+            return -1
+        }
+    }
+}
