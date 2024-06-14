@@ -3,6 +3,7 @@
 
 import Foundation
 import Combine
+import AppKit
 
 @objc public class FormulaDependency: NSObject {
 

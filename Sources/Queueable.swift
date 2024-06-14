@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import AppKit
 
 public typealias TaskInit = (_ onOutput: @escaping (QueueableOutput) -> Void) -> Task<Void, Error>
 
