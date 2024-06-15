@@ -10,9 +10,13 @@ import AppKit
 import ApplicationServices
 import ScriptingBridge
 
-public struct Target: Hashable, Identifiable {
+@objc public class Target: NSObject, Identifiable {
 
     public let id: String
+
+    public override var hash: Int {
+        id.hash
+    }
 
     public var runningApp: NSRunningApplication? {
         NSRunningApplication.runningApplications(withBundleIdentifier: id)
@@ -53,11 +57,30 @@ public struct Target: Hashable, Identifiable {
         return name ?? id
     }
 
-    public init(id: String) {
+    internal required init(id: String) {
         self.id = id
     }
 
     public func getAppScripting<T: SBApplication>() -> T? {
         SBApplication(bundleIdentifier: id) as? T
+    }
+
+    public override func isEqual(_ object: Any?) -> Bool {
+        if let other = object as? Target {
+            return self.id == other.id
+        } else {
+            return false
+        }
+    }
+
+    public static func factory(id: String) -> Target {
+        switch id {
+        case Self.xcode.id:
+            return .xcode
+        case Self.finder.id:
+            return .finder
+        default:
+            return .init(id: id)
+        }
     }
 }

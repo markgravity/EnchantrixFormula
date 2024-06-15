@@ -1,5 +1,5 @@
 //
-//  Terminal.swift
+//  CommandLineTool.swift
 //  EnchantrixFormula
 //
 //  Created by MarkG on 4/6/24.
@@ -7,31 +7,31 @@
 
 import Foundation
 
-@objc public protocol Terminal {
+@objc public protocol CommandLineTool {
 
     @objc func run(
         _ cmd : String,
         at dir: URL?,
-        onOuput: ((TerminalOutput) -> Void)?
+        onOutput: ((CommandLineToolOutput) -> Void)?
     ) async throws
 }
 
-public extension Terminal {
+public extension CommandLineTool {
 
     func run(
         _ cmd : String,
         at dir: URL? = nil,
-        onOuput: ((TerminalOutput) -> Void)? = nil
+        onOutput: ((CommandLineToolOutput) -> Void)? = nil
     ) async throws {
         try await run(
             cmd,
             at: dir,
-            onOuput: onOuput
+            onOutput: onOutput
         )
     }
 }
 
-@objc public class TerminalOutput: NSObject {
+@objc public class CommandLineToolOutput: NSObject {
 
     public let isError: Bool
     public let content: String

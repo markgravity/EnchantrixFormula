@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public protocol Keylogger {
+public protocol Keylogger {
 
     func registerListener(for formula: Formula & Enchantable, onEvent: @escaping (KeyloggerEvent) -> Void)
     func unregisterListener(for formula: Formula)

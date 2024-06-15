@@ -84,7 +84,7 @@ public struct QueueableOutput: Hashable, Equatable {
         self.content = content
     }
 
-    public init(output: TerminalOutput) {
+    public init(output: CommandLineToolOutput) {
         isError = output.isError
         content = output.content
     }
@@ -92,5 +92,5 @@ public struct QueueableOutput: Hashable, Equatable {
 
 public protocol Queueable {
 
-    func queue() -> QueuedTask
+    func queue(for target: Target) -> QueuedTask
 }

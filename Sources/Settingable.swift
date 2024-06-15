@@ -1,5 +1,5 @@
 //
-//  Configurable.swift
+//  Settingable.swift
 //  EnchantrixFormula
 //
 //  Created by MarkG on 10/6/24.
@@ -9,13 +9,29 @@ import Foundation
 import Combine
 import SwiftUI
 
-public protocol Configurable {
+public protocol Settingable {
 
-    var settings: any FormulaSettings { get }
-    var settingsView: AnyView { get }
+    var target: Target { get }
+    var settings: FormulaSettings { get }
+    var settingsView: AnyView? { get }
 }
 
-public protocol FormulaSettings: ObservableObject {}
+public extension Settingable {
+
+    var settingsView: AnyView? { nil }
+}
+
+open class FormulaSettings: NSObject, ObservableObject {
+
+    public let formula: Formula & Settingable
+
+    @FormulaSettingItem 
+    public var isEnchanted: Bool = true
+
+    required public init(formula: Formula & Settingable) {
+        self.formula = formula
+    }
+}
 
 @propertyWrapper
 public struct FormulaSettingItem<Value> {
@@ -53,7 +69,7 @@ public struct FormulaSettingItem<Value> {
         publisher = Publisher(wrappedValue)
     }
 
-    public static subscript<OuterSelf: ObservableObject>(
+    public static subscript<OuterSelf: FormulaSettings>(
         _enclosingInstance observed: OuterSelf,
         wrapped wrappedKeyPath: ReferenceWritableKeyPath<OuterSelf, Value>,
         storage storageKeyPath: ReferenceWritableKeyPath<OuterSelf, Self>
@@ -70,18 +86,17 @@ public struct FormulaSettingItem<Value> {
             return value
         }
         set {
-            if let subject = observed.objectWillChange as? ObservableObjectPublisher {
-                subject.send() // Before modifying wrappedValue
-                observed[keyPath: storageKeyPath].wrappedValue = newValue
-                let userDefaults = getUserDefaults(for: observed)
-                let key = getKey(for: observed, wrappedKeyPath: wrappedKeyPath)
-                userDefaults.set(newValue, forKey: key)
-            }
+            observed.objectWillChange.send()
+            observed[keyPath: storageKeyPath].wrappedValue = newValue
+            
+            let userDefaults = getUserDefaults(for: observed)
+            let key = getKey(for: observed, wrappedKeyPath: wrappedKeyPath)
+            userDefaults.set(newValue, forKey: key)
         }
     }
 
 
-    static private func getModuleName<OuterSelf: ObservableObject>(for observed: OuterSelf) -> String {
+    static private func getModuleName<OuterSelf: FormulaSettings>(for observed: OuterSelf) -> String {
         String(
             String(reflecting: observed.self)
                 .split(separator: ".")
@@ -89,7 +104,7 @@ public struct FormulaSettingItem<Value> {
         )
     }
 
-    static private func getKey<OuterSelf: ObservableObject>(
+    static private func getKey<OuterSelf: FormulaSettings>(
         for observed: OuterSelf,
         wrappedKeyPath: ReferenceWritableKeyPath<OuterSelf, Value>
     ) -> String {
@@ -99,11 +114,8 @@ public struct FormulaSettingItem<Value> {
             .joined(separator: ".")
     }
 
-    static private func getUserDefaults<OuterSelf: ObservableObject>(for observed: OuterSelf) -> UserDefaults {
-        guard let name = Bundle(for: OuterSelf.self).infoDictionary?["CFBundleIdentifier"] as? String
-        else { fatalError("Missing bundle identifier") }
-
-        return .init(suiteName: name)!
+    static private func getUserDefaults<OuterSelf: FormulaSettings>(for observed: OuterSelf) -> UserDefaults {
+        .init(suiteName: "\(observed.formula.target.id).\(observed.formula.id)")!
     }
 }
 

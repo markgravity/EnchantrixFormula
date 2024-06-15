@@ -26,5 +26,5 @@ public struct TargetItem {
 
 public protocol TargetableItem {
 
-    func getTargetItem() -> TargetItem?
+    func getTargetItem(on target: Target) -> TargetItem?
 }
