@@ -6,25 +6,19 @@ import Combine
 import AppKit
 import SwiftUI
 
-@objc public class FormulaDependency: NSObject {
+public enum FormulaDependency {
 
-    @objc public static let keylogger = FormulaDependency(rawValue: 0)
-    @objc public static let commandLineTool = FormulaDependency(rawValue: 1)
-    @objc public static let overlayInjector = FormulaDependency(rawValue: 2)
-
-    let rawValue: Int
-
-    init(rawValue: Int) {
-        self.rawValue = rawValue
-    }
+    case keylogger,
+         commandLineTool,
+         overlay
 }
 
-@objc public protocol Formula {
+public protocol Formula {
 
-    @objc var id: String { get }
-    @objc var name: String { get }
-    @objc var description: String { get }
-    @objc var icon: NSImage? { get }
+    var id: String { get }
+    var name: String { get }
+    var description: String { get }
+    var icon: NSImage? { get }
 }
 
 public protocol Enchantable: Settingable {
@@ -49,4 +43,9 @@ public extension Enchantable {
     var targets: [Target] {
         Self.targets
     }
+}
+
+public extension Formula where Self: Enchantable {
+
+    var id: String { Self.id }
 }

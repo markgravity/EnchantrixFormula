@@ -46,6 +46,7 @@ public class SafariTarget: Target {
         safari.activate()
         if let window = windows.first(where: {
             $0.name?.starts(with: "\(profile.name) —") ?? false
+                && $0.visible ?? false
         }) {
             window.setVisible?(true)
         } else {
