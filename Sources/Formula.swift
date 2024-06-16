@@ -10,6 +10,7 @@ import SwiftUI
 
     @objc public static let keylogger = FormulaDependency(rawValue: 0)
     @objc public static let commandLineTool = FormulaDependency(rawValue: 1)
+    @objc public static let overlayInjector = FormulaDependency(rawValue: 2)
 
     let rawValue: Int
 

@@ -29,4 +29,4 @@ let package = Package(
 )
 EOF
 
-cp -R "." "../Frameworks/$2"
+cp -R "." "../../Frameworks/$2"

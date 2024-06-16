@@ -47,26 +47,27 @@ public struct FormulaSettingItem<Value> {
     }
 
     private var publisher: Publisher
-
-    public struct Publisher: Combine.Publisher {
-
-        public typealias Output = Value
-        public typealias Failure = Never
-
-        var subject: CurrentValueSubject<Value, Never> // PassthroughSubject will lack the call of initial assignment
-
-        public func receive<S>(subscriber: S) where S: Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
-            subject.subscribe(subscriber)
-        }
-
-        init(_ output: Output) {
-            subject = .init(output)
-        }
-    }
+    private var valueGetter: (UserDefaults, String) -> Value
 
     public init(wrappedValue: Value) {
         self.wrappedValue = wrappedValue
         publisher = Publisher(wrappedValue)
+        valueGetter = { userDefault, key in
+            return userDefault.value(forKey: key) as? Value ?? wrappedValue
+        }
+    }
+
+    public init(wrappedValue: Value) where Value: RawRepresentable {
+        self.wrappedValue = wrappedValue
+        publisher = Publisher(wrappedValue)
+        valueGetter = { userDefault, key in
+            guard let data = userDefault.value(forKey: key) as? Value.RawValue,
+                  let value = Value(rawValue: data) else {
+                return wrappedValue
+            }
+
+            return value
+        }
     }
 
     public static subscript<OuterSelf: FormulaSettings>(
@@ -75,15 +76,9 @@ public struct FormulaSettingItem<Value> {
         storage storageKeyPath: ReferenceWritableKeyPath<OuterSelf, Self>
     ) -> Value {
         get {
-            let value = observed[keyPath: storageKeyPath].wrappedValue
             let userDefaults = getUserDefaults(for: observed)
             let key = getKey(for: observed, wrappedKeyPath: wrappedKeyPath)
-            if let storedValue = userDefaults.value(forKey: key) as? Value {
-                return storedValue
-            }
-            
-            userDefaults.set(value, forKey: key)
-            return value
+            return observed[keyPath: storageKeyPath].valueGetter(userDefaults, key)
         }
         set {
             observed.objectWillChange.send()
@@ -91,10 +86,14 @@ public struct FormulaSettingItem<Value> {
             
             let userDefaults = getUserDefaults(for: observed)
             let key = getKey(for: observed, wrappedKeyPath: wrappedKeyPath)
-            userDefaults.set(newValue, forKey: key)
+
+            if let data = newValue as? (any RawRepresentable) {
+                userDefaults.set(data.rawValue, forKey: key)
+            } else {
+                userDefaults.set(newValue, forKey: key)
+            }
         }
     }
-
 
     static private func getModuleName<OuterSelf: FormulaSettings>(for observed: OuterSelf) -> String {
         String(
@@ -119,3 +118,22 @@ public struct FormulaSettingItem<Value> {
     }
 }
 
+
+public extension FormulaSettingItem {
+
+    struct Publisher: Combine.Publisher {
+
+        public typealias Output = Value
+        public typealias Failure = Never
+
+        var subject: CurrentValueSubject<Value, Never> // PassthroughSubject will lack the call of initial assignment
+
+        public func receive<S>(subscriber: S) where S: Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
+            subject.subscribe(subscriber)
+        }
+
+        init(_ output: Output) {
+            subject = .init(output)
+        }
+    }
+}

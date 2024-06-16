@@ -84,3 +84,8 @@ import ScriptingBridge
         }
     }
 }
+
+public extension Target {
+
+    static var any: Target { .init(id: "any") }
+}
