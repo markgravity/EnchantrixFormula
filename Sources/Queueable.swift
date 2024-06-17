@@ -21,8 +21,7 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable {
     public let id: UUID = .init()
     public let name: String
     public let icon: NSImage?
-    public let targetName: String
-    public let targetIcon: NSImage?
+    public let targetItem: TargetItem?
 
     let taskInit: TaskInit
 
@@ -36,14 +35,12 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable {
     public init(
         name: String,
         icon: NSImage?,
-        targetName: String,
-        targetIcon: NSImage?,
+        targetItem: TargetItem?,
         taskInit: @escaping TaskInit
     ) {
         self.name = name
         self.icon = icon
-        self.targetName = targetName
-        self.targetIcon = targetIcon
+        self.targetItem = targetItem
         self.taskInit = taskInit
     }
 

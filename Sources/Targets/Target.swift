@@ -51,6 +51,10 @@ import ScriptingBridge
     }
 
     public var name: String {
+        if id == "any" {
+            return "All Applications"
+        }
+
         guard let bundle else { return id }
 
         let name = bundle.infoDictionary?["CFBundleDisplayName"] as? String ?? bundle.infoDictionary?["CFBundleName"] as? String

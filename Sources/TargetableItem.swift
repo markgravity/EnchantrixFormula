@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-public struct TargetItem {
+public struct TargetItem: Hashable, Equatable {
 
     public let name: String
     public let icon: NSImage

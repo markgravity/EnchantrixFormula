@@ -12,6 +12,11 @@ public protocol Childrenable {
     var children: [Formula] { get }
 }
 
+public protocol DynamicChildrenable: Childrenable {
+
+    func generateChildren(for target: Target)
+}
+
 public protocol ChildFormula: Formula {
 
     associatedtype Parent: Formula
