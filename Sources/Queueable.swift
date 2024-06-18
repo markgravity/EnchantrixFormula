@@ -16,7 +16,7 @@ public enum QueuedTaskStatus {
     case queued, running, success, error
 }
 
-public final class QueuedTask: ObservableObject, Identifiable, Equatable {
+public final class QueuedTask: ObservableObject, Identifiable, Equatable, Hashable {
 
     public let id: UUID = .init()
     public let name: String
@@ -44,7 +44,7 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable {
         self.taskInit = taskInit
     }
 
-    public func run(completion: @escaping () -> Void) {
+    public func run(completion: ( () -> Void)? = nil) {
         Task {
             await MainActor.run {
                 status = .running
@@ -61,9 +61,13 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable {
 
             await MainActor.run { [hasError] in
                 status = hasError ? .error : .success
-                completion()
+                completion?()
             }
         }
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 
     public static func == (lhs: QueuedTask, rhs: QueuedTask) -> Bool {
@@ -71,8 +75,9 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable {
     }
 }
 
-public struct QueueableOutput: Hashable, Equatable {
+public struct QueueableOutput: Identifiable, Hashable, Equatable {
 
+    public let id: UUID = .init()
     public let isError: Bool
     public let content: String
 

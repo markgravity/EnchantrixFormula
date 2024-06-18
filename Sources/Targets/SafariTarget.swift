@@ -8,6 +8,7 @@
 import Foundation
 import Safari
 import AppKit
+import ScriptingBridge
 
 public struct SafariProfile: Identifiable, Hashable {
 
@@ -48,7 +49,7 @@ public class SafariTarget: Target {
             $0.name?.starts(with: "\(profile.name) —") ?? false
                 && $0.visible ?? false
         }) {
-            window.setVisible?(true)
+            window.setIndex?(0)
         } else {
             guard let profileButton = element?
                 .firstChild(where: {
@@ -65,7 +66,28 @@ public class SafariTarget: Target {
             url = components?.url ?? url
         }
 
-        NSWorkspace.shared.open(url)
+        let script = NSAppleScript(source: """
+tell application "Safari"
+    set targetURL to "\(url.absoluteString)"
+    set frontWindow to front window
+    set urlFound to false
+
+    repeat with t in tabs of frontWindow
+        if URL of t is targetURL then
+            set current tab of frontWindow to t
+            set urlFound to true
+            exit repeat
+        end if
+    end repeat
+
+    if not urlFound then
+        set newTab to (make new tab at end of tabs of frontWindow with properties {URL:targetURL})
+        set current tab of frontWindow to newTab
+    end if
+end tell
+""")
+        var error: NSDictionary?
+        _ = script?.executeAndReturnError(&error).stringValue
     }
 }
 
@@ -73,3 +95,4 @@ public extension Target {
 
     static var safari: SafariTarget { .init(id: "com.apple.Safari") }
 }
+

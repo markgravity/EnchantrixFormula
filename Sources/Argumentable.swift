@@ -47,20 +47,15 @@ public struct ArgumentDefinition: Hashable, Identifiable, Equatable {
     }
 }
 
-public struct Arguments: Sequence, IteratorProtocol {
+public struct Arguments: Sequence {
 
-    private var index: Int = 0
     private var data: [ArgumentDefinition: String] = [:]
 
     public init() {}
 
-    mutating public func next() -> (ArgumentDefinition, String)? {
-        let keys = data.keys.map { $0 as ArgumentDefinition }
-        if index < keys.count {
-            return (keys[index] , data[keys[index]]!)
-        } else {
-            return nil
-        }
+
+    public func makeIterator() -> [ArgumentDefinition: String].Iterator {
+        data.makeIterator()
     }
 
     public subscript(definition: ArgumentDefinition) -> String? {

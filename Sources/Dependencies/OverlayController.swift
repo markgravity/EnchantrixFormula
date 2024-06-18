@@ -10,7 +10,11 @@ import SwiftUI
 
 public protocol OverlayController {
 
-    func show<Content>(at position: CGPoint, @ViewBuilder content: () -> Content) where Content: View
+    func show<Content>(
+        at position: CGPoint,
+        in screen: NSScreen,
+        @ViewBuilder content: () -> Content
+    ) where Content: View
     func hide()
 
 }

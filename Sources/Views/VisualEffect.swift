@@ -11,6 +11,9 @@ public struct VisualEffect: NSViewRepresentable {
 
     public init() {}
 
-    public func makeNSView(context: Self.Context) -> NSView { return NSVisualEffectView() }
+    public func makeNSView(context: Self.Context) -> NSView { 
+        NSVisualEffectView()
+    }
+
     public func updateNSView(_ nsView: NSView, context: Context) { }
 }
