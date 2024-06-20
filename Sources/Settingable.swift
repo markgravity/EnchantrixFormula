@@ -23,6 +23,18 @@ public extension Settingable {
 
 open class FormulaSettings: NSObject, ObservableObject {
 
+    fileprivate lazy var bundleID: String = {
+        let bundle = Bundle.init(for: type(of: self))
+        guard let bundleID = bundle.infoDictionary?["CFBundleIdentifier"] as? String else {
+            fatalError("Unable to get CFBundleIdentifier")
+        }
+        return bundleID
+    }()
+
+    fileprivate lazy var userDefaults: UserDefaults = {
+        .init(suiteName: bundleID)!
+    }()
+
     public let formula: Formula & Settingable
 
     @FormulaSettingItem 
@@ -30,6 +42,12 @@ open class FormulaSettings: NSObject, ObservableObject {
 
     required public init(formula: Formula & Settingable) {
         self.formula = formula
+
+    }
+
+    func clear() {
+        userDefaults.removeSuite(named: bundleID)
+        userDefaults.synchronize()
     }
 }
 
@@ -70,6 +88,19 @@ public struct FormulaSettingItem<Value> {
         }
     }
 
+    public init(wrappedValue: Value) where Value: FormulaSettingItemValuable {
+        self.wrappedValue = wrappedValue
+        publisher = Publisher(wrappedValue)
+        valueGetter = { userDefault, key in
+            guard let data = userDefault.value(forKey: key) as? Data,
+                  let value = try? JSONDecoder().decode(Value.self, from: data) else {
+                return wrappedValue
+            }
+
+            return value
+        }
+    }
+
     public static subscript<OuterSelf: FormulaSettings>(
         _enclosingInstance observed: OuterSelf,
         wrapped wrappedKeyPath: ReferenceWritableKeyPath<OuterSelf, Value>,
@@ -89,9 +120,16 @@ public struct FormulaSettingItem<Value> {
 
             if let data = newValue as? (any RawRepresentable) {
                 userDefaults.set(data.rawValue, forKey: key)
-            } else {
-                userDefaults.set(newValue, forKey: key)
+                return
             }
+
+            if let encodable = newValue as? FormulaSettingItemValuable,
+               let data = try? JSONEncoder().encode(encodable) {
+                userDefaults.set(data, forKey: key)
+                return
+            }
+
+            userDefaults.set(newValue, forKey: key)
         }
     }
 
@@ -114,14 +152,14 @@ public struct FormulaSettingItem<Value> {
     }
 
     static private func getUserDefaults<OuterSelf: FormulaSettings>(for observed: OuterSelf) -> UserDefaults {
-        .init(suiteName: "\(observed.formula.target.id).\(observed.formula.id)")!
+        observed.userDefaults
     }
 }
 
 
-public extension FormulaSettingItem {
+extension FormulaSettingItem {
 
-    struct Publisher: Combine.Publisher {
+    public struct Publisher: Combine.Publisher {
 
         public typealias Output = Value
         public typealias Failure = Never
@@ -135,5 +173,44 @@ public extension FormulaSettingItem {
         init(_ output: Output) {
             subject = .init(output)
         }
+    }
+}
+
+public protocol FormulaSettingItemValuable: Codable {}
+
+extension Array: RawRepresentable where Element: Codable {
+
+    public init?(rawValue: String) {
+        guard let data = rawValue.data(using: .utf8),
+              let result = try? JSONDecoder().decode([Element].self, from: data)
+        else {
+            return nil
+        }
+        self = result
+    }
+
+    public var rawValue: String {
+        guard let data = try? JSONEncoder().encode(self),
+              let result = String(data: data, encoding: .utf8)
+        else {
+            return "[]"
+        }
+        return result
+    }
+}
+
+extension Dictionary: RawRepresentable where Key: Codable, Value: Codable {
+    
+    public init?(rawValue: Data) {
+        let decoder = JSONDecoder()
+        guard let dictionary = try? decoder.decode([Key: Value].self, from: rawValue) else {
+            return nil
+        }
+        self = dictionary
+    }
+
+    public var rawValue: Data {
+        let encoder = JSONEncoder()
+        return (try? encoder.encode(self)) ?? Data()
     }
 }

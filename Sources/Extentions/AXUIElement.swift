@@ -125,40 +125,69 @@ public extension AXUIElement {
         print(error)
     }
 
-    func appActive() {
-        AXUIElementSetAttributeValue(self, kAXFrontmostAttribute as CFString, true as CFTypeRef)
-    }
-
-    func makeMain() {
-        AXUIElementSetAttributeValue(self, kAXMainWindowAttribute as CFString, true as CFTypeRef)
-    }
-
     func perform(_ action: String) {
         AXUIElementPerformAction(self, action as CFString)
+    }
+
+    func element(at point: CGPoint) -> AXUIElement? {
+        var element: AXUIElement?
+        _ = AXUIElementCopyElementAtPosition(
+            self,
+            Float(point.x),
+            Float(point.y),
+            &element
+        )
+
+        return element
     }
 }
 
 // MARK: - Rect
 
 public extension AXUIElement {
+
     var position: CGPoint? {
-        guard let value: AXValue = try? copyValue(key: kAXPositionAttribute)
-        else { return nil }
-        var point: CGPoint = .zero
-        if AXValueGetValue(value, .cgPoint, &point) {
-            return point
+        get {
+            guard let value: AXValue = try? copyValue(key: kAXPositionAttribute)
+            else { return nil }
+            var point: CGPoint = .zero
+            if AXValueGetValue(value, .cgPoint, &point) {
+                return point
+            }
+            return nil
         }
-        return nil
+
+        set {
+            var value = newValue
+            let axValue = AXValueCreate(.cgPoint, &value)!
+            AXUIElementSetAttributeValue(
+                self,
+                kAXPositionAttribute as CFString,
+                axValue
+            )
+        }
     }
 
     var size: CGSize? {
-        guard let value: AXValue = try? copyValue(key: kAXSizeAttribute)
-        else { return nil }
-        var size: CGSize = .zero
-        if AXValueGetValue(value, .cgSize, &size) {
-            return size
+        get {
+            guard let value: AXValue = try? copyValue(key: kAXSizeAttribute)
+            else { return nil }
+            var size: CGSize = .zero
+            if AXValueGetValue(value, .cgSize, &size) {
+                return size
+            }
+            return nil
         }
-        return nil
+
+        set {
+            var value = newValue!
+            let axValue = AXValueCreate(.cgSize, &value)!
+            AXUIElementSetAttributeValue(
+                self,
+                kAXSizeAttribute as CFString,
+                axValue
+            )
+        }
     }
 
     var rect: CGRect? {
@@ -170,6 +199,7 @@ public extension AXUIElement {
 // MARK: - Relationship
 
 public extension AXUIElement {
+
     var focusedElement: AXUIElement? {
         try? copyValue(key: kAXFocusedUIElementAttribute)
     }
@@ -287,6 +317,7 @@ public extension AXUIElement {
 // MARK: - Helper
 
 public extension AXUIElement {
+
     func copyValue<T>(key: String, ofType _: T.Type = T.self) throws -> T {
         var value: AnyObject?
         let error = AXUIElementCopyAttributeValue(self, key as CFString, &value)
@@ -316,5 +347,3 @@ public extension AXUIElement {
 }
 
 extension AXError: Error {}
-
-

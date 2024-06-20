@@ -10,7 +10,8 @@ public enum FormulaDependency {
 
     case keylogger,
          commandLineTool,
-         overlay
+         overlay,
+         eventBus
 }
 
 public protocol Formula {

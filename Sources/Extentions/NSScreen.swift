@@ -8,6 +8,7 @@
 import AppKit
 import ApplicationServices
 
+public typealias NSScreenID = String
 public extension NSScreen {
 
     static var activeAtFrontmostApplication: NSScreen? {
@@ -35,6 +36,10 @@ public extension NSScreen {
         return nil
     }
 
+    static var base: NSScreen? {
+        screens.first { $0.frame.origin == .zero }
+    }
+
     static func active(from element: AXUIElement) -> NSScreen? {
         var windowElement: AXUIElement? = element
         if element.role != "AXWindow" {
@@ -56,6 +61,10 @@ public extension NSScreen {
         return nil
     }
 
+    var id: NSScreenID {
+        "\(rotation) \(frame)"
+    }
+
     var rotation: Double {
         let displayID = deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as! CGDirectDisplayID
 
@@ -65,7 +74,6 @@ public extension NSScreen {
     func convertPoint(_ point: CGPoint) -> CGPoint {
         var point = point
         // Get the current display ID for the screen
-
 
         // Adjust mouse coordinates based on the screen rotation
         switch rotation {

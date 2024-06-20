@@ -10,7 +10,7 @@ import AppKit
 import ApplicationServices
 import ScriptingBridge
 
-@objc public class Target: NSObject, Identifiable {
+@objc public class Target: NSObject, Identifiable, Codable {
 
     public let id: String
 
