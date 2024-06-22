@@ -7,6 +7,7 @@
 
 import Foundation
 import Finder
+import AppKit
 
 public class FinderTarget: Target {
 
@@ -38,6 +39,17 @@ public class FinderTarget: Target {
         }
 
         return itemURL
+    }
+
+    public func reveal(in url: URL) {
+        if url.hasDirectoryPath {
+            NSWorkspace.shared.selectFile(
+                nil,
+                inFileViewerRootedAtPath: url.path
+            )
+        } else {
+            NSWorkspace.shared.activateFileViewerSelecting([url])
+        }
     }
 }
 

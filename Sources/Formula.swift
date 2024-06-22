@@ -20,6 +20,7 @@ public protocol Formula {
     var name: String { get }
     var description: String { get }
     var icon: NSImage? { get }
+    var keywords: [String] { get }
 }
 
 public protocol Enchantable: Settingable {
@@ -49,4 +50,9 @@ public extension Enchantable {
 public extension Formula where Self: Enchantable {
 
     var id: String { Self.id }
+}
+
+public extension Formula {
+
+    var keywords: [String] { [] }
 }
