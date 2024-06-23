@@ -8,8 +8,9 @@
 import Foundation
 import AppKit
 
-public struct TargetItem: Hashable, Equatable {
+public struct TargetItem: Identifiable, Hashable, Equatable {
 
+    public var id: String { name }
     public let name: String
     public let icon: NSImage
 
@@ -21,6 +22,14 @@ public struct TargetItem: Hashable, Equatable {
     public init(name: String, icon: NSImage) {
         self.name = name
         self.icon = icon
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id
     }
 }
 

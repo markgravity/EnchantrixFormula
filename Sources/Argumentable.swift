@@ -22,6 +22,12 @@ public struct ArgumentDefinition: Hashable, Identifiable, Equatable {
         isRequired: false
     )
 
+    public static let requiredManual = Self.init(
+        name: "__manual__",
+        connection: nil,
+        isRequired: true
+    )
+
     public var id: String { name }
 
     public let name: String
@@ -38,6 +44,10 @@ public struct ArgumentDefinition: Hashable, Identifiable, Equatable {
         self.isRequired = isRequired
     }
 
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id
+    }
+
     public static func optional(name: String, connection: String? = nil) -> Self {
         .init(name: name, connection: connection, isRequired: false)
     }
@@ -45,6 +55,8 @@ public struct ArgumentDefinition: Hashable, Identifiable, Equatable {
     public static func required(name: String, connection: String? = nil) -> Self {
         .init(name: name, connection: connection, isRequired: true)
     }
+
+
 }
 
 public struct Arguments: Sequence {

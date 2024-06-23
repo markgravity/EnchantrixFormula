@@ -191,8 +191,31 @@ public extension AXUIElement {
     }
 
     var rect: CGRect? {
-        guard let position, let size else { return nil }
-        return .init(origin: position, size: size)
+        get {
+            guard let position, let size else { return nil }
+            return .init(origin: position, size: size)
+        }
+        set {
+            size = newValue?.size
+            position = newValue?.origin
+        }
+    }
+
+    var localRect: CGRect? {
+        guard let rect,
+              let baseScreen = NSScreen.base,
+              let screen = NSScreen.main
+        else { return nil }
+
+        let y = rect.origin.y + screen.frame.height - baseScreen.frame.height + screen.frame.origin.y
+
+        return .init(
+            origin: .init(
+                x: rect.origin.x - screen.visibleFrame.origin.x,
+                y: y
+            ),
+            size: rect.size
+        )
     }
 }
 

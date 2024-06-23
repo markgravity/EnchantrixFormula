@@ -44,6 +44,17 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable, Hashab
         self.taskInit = taskInit
     }
 
+    public init(
+        formula: Formula,
+        targetItem: TargetItem?,
+        taskInit: @escaping TaskInit
+    ) {
+        name = formula.name
+        icon = formula.icon
+        self.targetItem = targetItem
+        self.taskInit = taskInit
+    }
+
     public func run(completion: ( () -> Void)? = nil) {
         Task {
             await MainActor.run {
@@ -72,6 +83,23 @@ public final class QueuedTask: ObservableObject, Identifiable, Equatable, Hashab
 
     public static func == (lhs: QueuedTask, rhs: QueuedTask) -> Bool {
         lhs.id == rhs.id
+    }
+
+    public static func error(
+        in formula: Formula,
+        targetItem: TargetItem?,
+        message: String
+    ) -> QueuedTask {
+        .init(
+            name: formula.name,
+            icon: formula.icon,
+            targetItem: targetItem,
+            taskInit: { output in
+                Task {
+                    output(.init(isError: true, content: message))
+                }
+            }
+        )
     }
 }
 
